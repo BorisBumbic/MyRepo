@@ -27,7 +27,7 @@ namespace Böcker_1
 
         public void SetISBN(string number)
         {
-            if (Regex.IsMatch(number, @"\d\d\d-\d-\d\d-\d\d\d\d\d\d-\d$"))
+            if (Regex.IsMatch(number, @"\d{3}-\d-\d{2}-\d{6}-\d$"))
                 ISBN = number;
         }
 
