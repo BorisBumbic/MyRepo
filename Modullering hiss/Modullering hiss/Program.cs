@@ -22,7 +22,7 @@ namespace Modullering_hiss
             Console.WriteLine($"       {Bosse.Report()}");
 
             Random.Info("Signal att åka upp en våning");
-            Bosse.GoUp();
+            Bosse.GoDown();
             Console.WriteLine("     " + Bosse.Report());
 
             Random.Info("Signal att åka upp en våning");

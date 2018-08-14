@@ -43,6 +43,7 @@ namespace Modullering_hiss
                 {
                     Console.WriteLine("Du är på högsta våningen redan!");
                     startvåning = högstaVåning;
+                    break;
                 }
 
                 else
@@ -67,6 +68,7 @@ namespace Modullering_hiss
                 {
                     Console.WriteLine("Du är på lägsta våningen redan!");
                     startvåning = lägstaVåning;
+                    break;
                 }
                 else
                 {
