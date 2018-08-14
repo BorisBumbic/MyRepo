@@ -40,7 +40,7 @@ namespace Böcker_1
         {
             numberOfPages = pageNumbers;
 
-            if (numberOfPages > 1000)
+            if (numberOfPages > 1000 || numberOfPages < 0)
                 numberOfPages = 300;
         }
 
