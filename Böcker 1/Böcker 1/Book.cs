@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Böcker_1
 {
-    class Book
+    public class Product
     {
         string authorName;
         string ISBN;
         int numberOfPages;
-        
-   
+        int bookID;
+
 
         public void SetAuthorName(string name)
         {
@@ -28,7 +28,7 @@ namespace Böcker_1
         public void SetISBN(string number)
         {
             if (Regex.IsMatch(number, @"\d\d\d-\d-\d\d-\d\d\d\d\d\d-\d$"))
-            ISBN = number;
+                ISBN = number;
         }
 
         public string GetISBN()
@@ -59,12 +59,33 @@ namespace Böcker_1
                 return "Tjock";
         }
 
-        public double WeightInGrams()
+        public void SetBookID(int value)
         {
-            double bookWeight = numberOfPages * 0.8;
-            return bookWeight;
+            bookID = value;
         }
 
+        public int GetBookId()
+        {
+            return bookID;
+        }
+
+        public class Book : Product
+        {
+            public double WeightInGrams()
+            {
+                double bookWeight = numberOfPages * 0.8;
+                return bookWeight;
+            }
+
+        }
+
+        public class EBook : Product
+            {
+             public void SendTo(string value)
+            {
+                Console.WriteLine($"Boken till e-mailadressen {value}");
+            }
+            }
     }
 }
 
