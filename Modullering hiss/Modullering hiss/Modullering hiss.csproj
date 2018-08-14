@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63174E05-CE3D-4DF2-827C-BC0A36FDD88E}</ProjectGuid>
+    <ProjectGuid>{3077C117-CAEF-48AF-B5D8-6B5BF0CD7E8E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Böcker_1</RootNamespace>
-    <AssemblyName>Böcker 1</AssemblyName>
+    <RootNamespace>Modullering_hiss</RootNamespace>
+    <AssemblyName>Modullering hiss</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Böcker 2\Book.cs">
-      <Link>Book.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Böcker 2\Program.cs">
-      <Link>Program.cs</Link>
-    </Compile>
+    <Compile Include="Elevator.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
