@@ -10,12 +10,14 @@ namespace Shapes_7._1___7._2
     {
         public abstract class Shape
         {
-
+            public abstract double CalculateArea(List<Shape> shapeList);
+        
         }
 
         public class Round : Shape
         {
-
+            public double CalculateArea(List<Shape> shapeList);
+            {}
         }
 
         public class Cornery : Shape
@@ -29,9 +31,9 @@ namespace Shapes_7._1___7._2
             public int bas { get; set; }
             public int höjd { get; set; }
 
-            public int Area()
+            public double CalculateArea()
             {
-                int area = (bas * höjd) / 2;
+                double area = (bas * höjd) / 2;
                 return area;
             }
             public static void PrintAllShapes(List<Shape> listan)
@@ -39,7 +41,7 @@ namespace Shapes_7._1___7._2
                 //måste ändras, hela objekt kan ej skrivas ut
                 foreach (Shape item in listan)
                 {
-                    double area = item.Area();
+                    double area = item.CalculateArea();
                     Console.WriteLine(area);
                 }
                 listan.Clear();
@@ -65,9 +67,9 @@ namespace Shapes_7._1___7._2
             public int bas { get; set; }
             public int höjd { get; set; }
 
-            public int Area()
+            public double CalculateArea()
             {
-                int area = bas * höjd;
+                double area = bas * höjd;
                 return area;
             }
 
@@ -75,7 +77,7 @@ namespace Shapes_7._1___7._2
 
         public class Oval : Round
         {
-
+            
         }
 
         static void Main(string[] args)
