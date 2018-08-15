@@ -11,14 +11,14 @@ namespace Animal_exceptions
     {
         public static void Method(string[] lista)
         {
-            Regex aa = new Regex(@"^[a-zA-zåäö]+$");
+            Regex aa = new Regex(@"^[a-zA-ZÅÄÖåäö]+$");
             for (int i = 0; i < lista.Length; i++)
             {
                 if (!aa.Match(lista[i]).Success)
-                    throw new ArgumentException($"Ogiltiga/inga tecken på plats {i++} i listan!");
+                    throw new ArgumentException($"Ogiltiga/inga tecken på plats {++i} i listan!");
 
                 if (lista[i].Length > 20)
-                    throw new ArgumentException($"Input nummer {i++} är för lång!");
+                    throw new ArgumentException($"Input nummer {++i} är för lång!");
 
                 Console.WriteLine(lista[i]);
             }

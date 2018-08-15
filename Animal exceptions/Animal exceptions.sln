@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animal exceptions", "Animal exceptions\Animal exceptions.csproj", "{862413BB-A9D9-402C-9A67-C0C1376F0906}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalTesting", "AnimalTesting\AnimalTesting.csproj", "{285A95B3-6524-42E8-B6E3-208313D12D94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{862413BB-A9D9-402C-9A67-C0C1376F0906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{862413BB-A9D9-402C-9A67-C0C1376F0906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{862413BB-A9D9-402C-9A67-C0C1376F0906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285A95B3-6524-42E8-B6E3-208313D12D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285A95B3-6524-42E8-B6E3-208313D12D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285A95B3-6524-42E8-B6E3-208313D12D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285A95B3-6524-42E8-B6E3-208313D12D94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
