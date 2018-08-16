@@ -40,18 +40,25 @@ namespace _10._5_Product_list_with_dictionary
 
                 string[] stringArray = input.Split(',');
 
-                nummer = stringArray[0];
-                ord = stringArray[1];
 
                 try
-                {
-                    dict.Add(nummer, ord);
-                }
-                catch(ArgumentException argExc)
-                {
-                    Console.WriteLine(argExc);
-                }
-
+                    {
+                        nummer = stringArray[0];
+                        ord = stringArray[1];
+                        dict.Add(nummer, ord);
+                    }
+                    catch (ArgumentException NRE)
+                    {
+                        Console.WriteLine("Invalid input.\n" + NRE.Message);
+                    }
+                    catch (IndexOutOfRangeException ARGEXC)
+                    {
+                        Console.WriteLine(ARGEXC.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                    Console.WriteLine(ex.Message);
+                    }
 
                 Console.ForegroundColor = ConsoleColor.White;
                 
