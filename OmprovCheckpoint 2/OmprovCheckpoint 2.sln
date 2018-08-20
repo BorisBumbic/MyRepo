@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmprovCheckpoint 2", "OmprovCheckpoint 2\OmprovCheckpoint 2.csproj", "{6462E6FC-47A8-47C8-8404-DFDD1134B5DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6462E6FC-47A8-47C8-8404-DFDD1134B5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6462E6FC-47A8-47C8-8404-DFDD1134B5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6462E6FC-47A8-47C8-8404-DFDD1134B5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6462E6FC-47A8-47C8-8404-DFDD1134B5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6B08848-DF92-473A-89AF-3F2F2187E8A5}
+	EndGlobalSection
+EndGlobal
