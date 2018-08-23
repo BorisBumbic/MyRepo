@@ -19,25 +19,42 @@ namespace SlConsoleApp
                 //byte[] data = webClient.DownloadData("http://api.sl.se/api2/realtimedeparturesV4.json?key=fa7f8eaa090b4d6791ae9eda0f4384db&siteid=9192&timewindow=0");
 
 
-                string content = webClient.GetAsync("http://api.sl.se/api2/realtimedeparturesV4.json?key=fa7f8eaa090b4d6791ae9eda0f4384db&siteid=9192&timewindow=0").Result.Content.ReadAsStringAsync().Result;
+                string content = webClient.GetAsync("http://api.sl.se/api2/realtimedeparturesV4.json?key=fa7f8eaa090b4d6791ae9eda0f4384db&siteid=9302&timewindow=0").Result.Content.ReadAsStringAsync().Result;
 
                 var x = JsonConvert.DeserializeObject<RootObject>(content) ;
 
                 var periferi = new List<Metro>();
                 var central = new List<Metro>();
+
                 foreach (var metro in x.ResponseData.Metros)
                 {
-                    if (metro.Destination != "Hässelby strand") 
+                    if (metro.Destination != "Akalla") 
                             central.Add(metro);
                     else
                         periferi.Add(metro); 
 
                 }
 
-                
-                    Console.WriteLine($"{central[0].Destination}  {central[0].ExpectedDateTime} *** {periferi[0].Destination}  {periferi[0].ExpectedDateTime}");
+                int len1 = central.Count;
+                int len2 = periferi.Count;
+                int little = len1;
+                if (little < len2)
+                    little = len2;
 
-                
+                DateTime time = x.ResponseData.LatestUpdate;
+                Console.WriteLine("------------------------------------------------");
+                Console.WriteLine($"--Kista Tunnelbanestation--{time}--");
+
+
+                Console.WriteLine("------------------------------------------------\n************************************************\n***Mot T-Centralen*************Mot Akalla*******\n************************************************");
+
+
+                for (int i = 0; i < len2; i++)
+                {
+                    Console.WriteLine($"**{central[i].Destination}  {central[i].DisplayTime} *** {periferi[i].Destination}  {periferi[i].DisplayTime}");
+
+                }
+                Console.WriteLine("************************************************\n************************************************");
             }
         }
         //private void Metro_Load(object x, EventArgs e)
