@@ -7,13 +7,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-
-
 namespace Coutry
 {
     class Commad
     {
-        public Rootobject GetAllInformationFromApi()
+        public Rootobject GetUnprocessedInformationFromApi()
         {
             using (var webClient1 = new HttpClient())
             {
@@ -39,6 +37,7 @@ namespace Coutry
                 {
                     connection.Open();
                     command.Parameters.Add(new SqlParameter("@name", item.name));
+                    command.Parameters.Add(new SqlParameter("@CountryCode", item.code));
                     command.ExecuteNonQuery();
                 }
             }
@@ -48,13 +47,10 @@ namespace Coutry
         {
             foreach (var item in xs.rates)
             {
-
                 foreach (var item1 in item.periods)
                 {
-                    //läg till date
-                    string sql = @"INSERT INTO VATInformation(Standard, Reduced, Reduced1, Reduced2, Super_reduced, parking)  
-                                VALUES (@standard, @reduced, @reduced1, @reduced2, @superreduced, @parking)
-                                UPDATE VATInformation ";
+                    string sql = @"INSERT INTO VATInformation(Standard, Reduced, Reduced1, Reduced2, Super_reduced, parking, CountryCode, Taxdate)  
+                                VALUES (@standard, @reduced, @reduced1, @reduced2, @superreduced, @parking, @CountryCode, @date)";
 
                     using (SqlConnection connection = new SqlConnection(directory))
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -66,7 +62,8 @@ namespace Coutry
                         command.Parameters.Add(new SqlParameter("@Reduced2", item1.rates.reduced2));
                         command.Parameters.Add(new SqlParameter("@parking", item1.rates.parking));
                         command.Parameters.Add(new SqlParameter("@superreduced", item1.rates.super_reduced));
-                        //command.Parameters.Add(new SqlParameter("@date", item1.effective_from));
+                        command.Parameters.Add(new SqlParameter("@CountryCode", item.code));
+                        command.Parameters.Add(new SqlParameter("@date", item1.effective_from));
                         command.ExecuteNonQuery();
                     }
                 }
@@ -74,28 +71,61 @@ namespace Coutry
 
             }
         }
-
         public void ConnectTables(Rootobject xs)
         {
             string sql = @"UPDATE VATInformation
-                            SET CountryNameId = CountryNames.ID
-                            WHERE CountryNames.Country = @name";
+                            SET VATInformation.CountryNameId = CountryNames.ID
+                            FROM Vatinformation 
+                            JOIN CountryNames ON CountryNames.CountryCode = VATInformation.CountryCode;";
 
-            foreach (var item in xs.rates)
+            using (SqlConnection connection = new SqlConnection(directory))
+            using (SqlCommand command = new SqlCommand(sql, connection))
             {
-
-
-
-                using (SqlConnection connection = new SqlConnection(directory))
-                using (SqlCommand command = new SqlCommand(sql, connection))
-                {
-                    connection.Open();
-                    command.Parameters.Add(new SqlParameter("@name", item.name));
-                    command.ExecuteNonQuery();
-                }
+                connection.Open();
+                command.ExecuteNonQuery();
             }
+        }
+
+        public List<StandardVatList> ListStandardVAT()
+        {
+            string sql = @"SELECT Countrynames.country, vatinformation.standard
+                     FROM Countrynames 
+                     JOIN VatInformation ON VATInformation.CountryNameId = CountryNames.Id
+                     ORDER BY VATInformation.standard desc";
+
+            using (SqlConnection connection = new SqlConnection(directory))
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                List<StandardVatList> descList = new List<StandardVatList>();
+
+                while (reader.Read())
+                {
+                    var dL = new StandardVatList();
+
+                    string countryName = reader.GetSqlString(0).Value;
+                    double standardVat = reader.GetDouble(1);
+
+                    dL.countryName = countryName;
+                    dL.standardVat = standardVat;
+
+                    descList.Add(dL);
+                }
+                return descList;
+            }
+
 
         }
     }
 }
+//        public static StandardVatList()
+//        {
+//            string sql = @"select standard
+//                From VatInformation
+//Join Vatinformation on 
 
+//        }
+//    }
+//}

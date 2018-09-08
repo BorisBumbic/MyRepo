@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Coutry
 {
+    public class StandardVatList
+    {
+        public string countryName { get; set; }
+        public double standardVat { get; set; }
+
+    }
 
     public class Rootobject
     {
