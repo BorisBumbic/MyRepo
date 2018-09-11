@@ -11,6 +11,7 @@ namespace Gnomecheckpoint
         static void Main(string[] args)
         {
             var dataAccess = new DataAccess();
+            dataAccess.AddGnome("Erik');delete from gnomes;select ('HEJ");
             List<Gnome> gnomes = dataAccess.GetGnomesFromDatabase();
             DisplayGnomes(gnomes);
         }

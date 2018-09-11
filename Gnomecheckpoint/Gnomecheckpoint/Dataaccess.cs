@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Gnomecheckpoint
 {
     class DataAccess
     {
+        string conString = @"Server=(localdb)\mssqllocaldb;Database=GnomeDb";
+
         public List<Gnome> GetGnomesFromDatabase()
         {
-            string conString = @"Server=(localdb)\mssqllocaldb;Database=GnomeDb";
             string sql = @"select * from gnomes";
 
             using (SqlConnection connection = new SqlConnection(conString))
@@ -37,6 +39,28 @@ namespace Gnomecheckpoint
                 }
                 return GnomeList;
             }
+        }
+        public void AddGnome(string name)
+        {
+            Regex reggy = new Regex(@"(--|insert|select|update|\*|;)", RegexOptions.IgnoreCase);
+            Match match = reggy.Match(name);
+            if (match.Success)
+            {
+                Console.WriteLine("Invalid input! Try again!");
+            }
+            else
+            {
+                string sql = $"Insert into gnomes(name) values ('{name}')";
+
+                using (SqlConnection connection = new SqlConnection(conString))
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                }
+            }
+
         }
     }
 
