@@ -4,14 +4,16 @@ using EfSamurai;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EfSamurai.Migrations
 {
     [DbContext(typeof(SamuraiContext))]
-    partial class SamuraiContextModelSnapshot : ModelSnapshot
+    [Migration("20180911123130_finale")]
+    partial class finale
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,7 +118,11 @@ namespace EfSamurai.Migrations
 
                     b.HasKey("samuraiId", "battleId");
 
-                    b.HasIndex("battleId");
+                    b.HasIndex("battleId")
+                        .IsUnique();
+
+                    b.HasIndex("samuraiId")
+                        .IsUnique();
 
                     b.ToTable("SamuraisToBattle");
                 });
@@ -165,13 +171,13 @@ namespace EfSamurai.Migrations
             modelBuilder.Entity("EfSamurai.SamuraisToBattle", b =>
                 {
                     b.HasOne("EfSamurai.Battle", "battle")
-                        .WithMany("stb")
-                        .HasForeignKey("battleId")
+                        .WithOne("stb")
+                        .HasForeignKey("EfSamurai.SamuraisToBattle", "battleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("EfSamurai.Samurai", "Samurai")
-                        .WithMany("stb")
-                        .HasForeignKey("samuraiId")
+                        .WithOne("stb")
+                        .HasForeignKey("EfSamurai.SamuraisToBattle", "samuraiId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

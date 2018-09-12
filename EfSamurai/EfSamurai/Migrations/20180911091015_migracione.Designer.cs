@@ -4,14 +4,16 @@ using EfSamurai;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EfSamurai.Migrations
 {
     [DbContext(typeof(SamuraiContext))]
-    partial class SamuraiContextModelSnapshot : ModelSnapshot
+    [Migration("20180911091015_migracione")]
+    partial class migracione
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,8 +27,6 @@ namespace EfSamurai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("battleLogId");
-
                     b.Property<bool>("brutal");
 
                     b.Property<DateTime>("endDate");
@@ -37,41 +37,7 @@ namespace EfSamurai.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("battleLogId");
-
                     b.ToTable("Battle");
-                });
-
-            modelBuilder.Entity("EfSamurai.BattleEvent", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("battleLogId");
-
-                    b.Property<string>("input");
-
-                    b.Property<int>("order");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("battleLogId");
-
-                    b.ToTable("BattleEvent");
-                });
-
-            modelBuilder.Entity("EfSamurai.BattleLog", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("name");
-
-                    b.HasKey("id");
-
-                    b.ToTable("BattleLog");
                 });
 
             modelBuilder.Entity("EfSamurai.Quote", b =>
@@ -116,7 +82,11 @@ namespace EfSamurai.Migrations
 
                     b.HasKey("samuraiId", "battleId");
 
-                    b.HasIndex("battleId");
+                    b.HasIndex("battleId")
+                        .IsUnique();
+
+                    b.HasIndex("samuraiId")
+                        .IsUnique();
 
                     b.ToTable("SamuraisToBattle");
                 });
@@ -139,22 +109,6 @@ namespace EfSamurai.Migrations
                     b.ToTable("SecretIdentity");
                 });
 
-            modelBuilder.Entity("EfSamurai.Battle", b =>
-                {
-                    b.HasOne("EfSamurai.BattleLog", "log")
-                        .WithMany()
-                        .HasForeignKey("battleLogId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("EfSamurai.BattleEvent", b =>
-                {
-                    b.HasOne("EfSamurai.BattleLog", "battleLog")
-                        .WithMany("battleEvents")
-                        .HasForeignKey("battleLogId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("EfSamurai.Quote", b =>
                 {
                     b.HasOne("EfSamurai.Samurai", "owner")
@@ -165,13 +119,13 @@ namespace EfSamurai.Migrations
             modelBuilder.Entity("EfSamurai.SamuraisToBattle", b =>
                 {
                     b.HasOne("EfSamurai.Battle", "battle")
-                        .WithMany("stb")
-                        .HasForeignKey("battleId")
+                        .WithOne("stb")
+                        .HasForeignKey("EfSamurai.SamuraisToBattle", "battleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("EfSamurai.Samurai", "Samurai")
-                        .WithMany("stb")
-                        .HasForeignKey("samuraiId")
+                        .WithOne("stb")
+                        .HasForeignKey("EfSamurai.SamuraisToBattle", "samuraiId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

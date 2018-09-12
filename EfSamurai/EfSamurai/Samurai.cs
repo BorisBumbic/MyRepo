@@ -11,5 +11,6 @@ namespace EfSamurai
         public List<Quote> quoteList { get; set; }
         public Haircut haircut { get; set; }
         public SecretIdentity identity { get; set; }
+        public List<SamuraisToBattle> stb { get; set; }
     }
 }
