@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <!--<a href="/test1/Hej">Till min actionmetod</a>-->
+
+    <h3>Post formulär till AddPlanet</h3>
+
+    <form method="post" action="/WebApi1/AddPlanet">
+        Planet: <input name="Name" value="Saturnus" />
+        Storlek: <input name="Size" value="123" />
+        <button>Ok</button>
+    </form>
+
+    <hr />
+
+    <h3>Get formulär till GetPlanet</h3>
+
+    <form method="get" action="/WebApi1/GetPlanet">
+        Planet: <input name="Name" value="Saturnus" />
+        Storlek: <input name="Size" value="123" />
+        <button>Ok</button>
+    </form>
+
+    <hr />
+
+</body>
+</html>
