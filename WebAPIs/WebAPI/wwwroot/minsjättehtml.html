@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h3>Age</h3>
+    <form method="post" action="/test6/popDoc">
+        <input name="Age" value="25" />
+
+        <h3>Adress</h3>
+        <input name="Adress" value="Stockholmsvägen 15" />
+
+        <h3>Date</h3>
+        <input name="HandInDate" value="11/21/2018" />
+
+        <h3>Gender</h3>
+        Female
+        <input type="radio" name="Gender" value="Female" />
+        Other
+        <input type="radio" name="Gender" value="Other" />
+        Male
+        <input type="radio" name="Gender" value="Male" />
+
+        <h3>School</h3>
+        <select>
+            <option name="School" value="SU">SU</option>
+            <option name="School" value="KTH">KTH</option>
+        </select>
+
+        <h3>Postdoc?</h3>
+        <input actions="/test6/popDoc" type="checkbox" name="IsPostdoc" value="false"> I am working as a postdoc<br/>
+
+        <br /> <br />
+        <button>Ok</button>
+    </form>
+
+</body>
+</html>
