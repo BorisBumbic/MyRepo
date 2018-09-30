@@ -43,8 +43,21 @@ async function addToDb() {
 }
 
 async function displayObservations() {
-    var response = await fetch("/observation", { method: "GET" })
 
+    var response = await fetch("/observation/getty", { method: "GET" })
+
+    let html = "";
+
+    let get = await response.json()
+
+    for (let obs in get) {
+
+        html +=
+            `<li>${obs.BirdName}</li>`
+    }
+
+    document.getElementById("listan").innerHTML += html;
+        
 }
 
 

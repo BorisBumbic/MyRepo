@@ -28,10 +28,12 @@ namespace BirdWatcher.Web.Controllers
             return Ok("Observation added");
         }
 
-        [HttpGet]
+        [HttpGet("getty")]
         public IActionResult GetAll()
         {
-           _repo.
+            var a = _repo.GetAll();
+            return Ok("List fetched!");
+
         }
 
     }
