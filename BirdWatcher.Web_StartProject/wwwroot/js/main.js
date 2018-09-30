@@ -26,7 +26,10 @@ async function addToDb() {
             method: "POST",
 
             body: JSON.stringify({
-                BirdName: document.getElementById("BirdName").value
+                BirdName: document.getElementById("BirdName").value,
+                Date: document.getElementById("Date").value,
+                Location: document.getElementById("Location").value,
+                Notes: document.getElementById("Notes").value
             }),
 
             headers: {
@@ -57,24 +60,25 @@ async function displayObservations() {
 
             html +=
                 `<tr>
+            <td>${obs.date}</td>
             <td>${obs.birdName}</td>
+            <td>${obs.location}</td>
+            <td>${obs.notes}</td>
             </tr>`
         }
         document.getElementById("listan").innerHTML = html;
     }
     else
         Console.log("Did not connect properly");
+    toggleTh();
 }
 
+function toggleTh() {
 
-//if (response.status === 200)
-//    let allBirds = await response.json();
+    let x = document.getElementById("tHead");
 
-//let html = "";
-
-//for (let bird in allBirds) {
-
-//    html = bird + "<br>"
-//}
-
-//document.getElementById("tabell").innerHTML = html;
+    if (x.style.display === "none")
+        x.style.display = "block";
+    else
+        x.style.display = "none";
+}

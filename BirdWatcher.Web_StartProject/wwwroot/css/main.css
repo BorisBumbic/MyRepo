@@ -4,9 +4,9 @@
 }
 
 table {
-    
     border-collapse: collapse;
     width: 100%;
+    display: none;
 }
 
 td {

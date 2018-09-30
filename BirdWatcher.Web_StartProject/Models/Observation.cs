@@ -6,5 +6,8 @@ namespace BirdWatcher.Web.Models
     {
         public int Id { get; set; }
         public string BirdName { get; set; }
+        public string Location {get; set;}
+        public DateTime Date { get; set; }
+        public string Notes { get; set; }
     }
 }

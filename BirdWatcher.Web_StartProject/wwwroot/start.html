@@ -5,26 +5,41 @@
     <link href="/css/main.css" rel="stylesheet" />
 </head>
 <body>
-    <h3>Add Observation</h3>
+    <button onclick="recreateDatabase()" id="recreateButton">Recreate database</button>
+    <h3>Add Observations</h3>
     <br>
 
-    <input type="text" id="BirdName" value="mockingbird" />
+    <h5>Date</h5>
+    <input type="text" id="Date" value="2018-02-15 15:30" />
+
+    <h5>Specie</h5>
+    <input type="text" id="BirdName" value="Svala" />
+
+    <h5>Location</h5>
+    <input type="text" id="Location" value="Malmö" />
+
+    <h5>Notes</h5>
+    <input type="text" id="Notes" value="Enter info" />
+
     <button onclick="addToDb()" id="BirdNameInput">OK</button>
 
-    <br />
-    <h3>show all observations</h3>
-    <button onclick="displayObservations()" id="display">ok</button>
-    <h3>all observations</h3>
+    <button onclick="displayObservations()" id="display">Display all observations</button>
+    <h3>All Observations</h3>
 
-    <button onclick="recreateDatabase()" id="recreateButton">Recreate database</button>
 
-    <table id="tHead">
+
+    <table id="tHead" >
         <thead>
-            <tr></tr>
+            <tr>
+                <td>Date</td>
+                <td>Species</td>
+                <td>Location</td>
+                <td>Notes</td>
+            </tr>
         </thead>
         <tbody id="listan"></tbody>
     </table>
-    
+
     <script type="text/javascript" src="/js/main.js"></script>
 
 </body>
