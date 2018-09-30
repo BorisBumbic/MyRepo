@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Newsapp</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- recreate knapp -->
+    <button onclick="seed()" style="display: inline-block">Seed</button>
+    <button onclick="getStats()" style="display: inline-block">Statistics</button>
+    <button onclick="recreate()" style="display: inline-block">recreate</button>
+    <button onclick="toggleShowAdd()">Add</button>
+    <button onclick="displayTable()" style="display: inline-block">Update</button>
+    <!-- Add news "addFormHeader"-input och knapp till "addNews" -->
+    <table id="table"></table>
+
+    <div style="display:none" id="hiddenAdd">
+        Header:<input id="header" />
+        Info:<input id="info" />
+        Body;<input id="body" />
+        <button onclick="addNews()" id="showAddButton">ADD</button>
+    </div>
+
+
+
+
+    <div id="statswindow"></div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
