@@ -45,19 +45,25 @@ async function addToDb() {
 async function displayObservations() {
 
     var response = await fetch("/observation/getty", { method: "GET" })
+    console.log(response);
 
-    let html = "";
+    if (response.status === 200) {
+        let get = await response.json();
+        let html = "";
 
-    let get = await response.json()
 
-    for (let obs in get) {
+        console.log(get)
+        for (let obs of get) {
 
-        html +=
-            `<li>${obs.BirdName}</li>`
+            html +=
+                `<tr>
+            <td>${obs.birdName}</td>
+            </tr>`
+        }
+        document.getElementById("listan").innerHTML = html;
     }
-
-    document.getElementById("listan").innerHTML += html;
-        
+    else
+        Console.log("Did not connect properly");
 }
 
 

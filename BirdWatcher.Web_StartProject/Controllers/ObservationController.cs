@@ -32,7 +32,7 @@ namespace BirdWatcher.Web.Controllers
         public IActionResult GetAll()
         {
             var a = _repo.GetAll();
-            return Ok("List fetched!");
+            return Ok(a);
 
         }
 

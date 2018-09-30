@@ -8,20 +8,23 @@
     <h3>Add Observation</h3>
     <br>
 
-        <input type="text" id="BirdName" value="mockingbird" />
-        <button onclick="addToDb()" id="BirdNameInput">OK</button>
+    <input type="text" id="BirdName" value="mockingbird" />
+    <button onclick="addToDb()" id="BirdNameInput">OK</button>
 
-        <br />
-    <h3>show all observatíons</h3>
+    <br />
+    <h3>show all observations</h3>
     <button onclick="displayObservations()" id="display">ok</button>
     <h3>all observations</h3>
 
-    <ol id="listan">
-    </ol>
-
-
     <button onclick="recreateDatabase()" id="recreateButton">Recreate database</button>
 
+    <table id="tHead">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody id="listan"></tbody>
+    </table>
+    
     <script type="text/javascript" src="/js/main.js"></script>
 
 </body>
