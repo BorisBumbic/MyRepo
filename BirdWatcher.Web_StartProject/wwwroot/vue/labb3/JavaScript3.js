@@ -33,7 +33,6 @@
 
     methods: {
         add: function () {
-
             let input = this.inpy;
 
             this.a.push({name: input});
