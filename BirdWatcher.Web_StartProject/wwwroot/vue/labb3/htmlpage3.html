@@ -8,13 +8,25 @@
     <div id="app">
         <h1>Alla namn</h1>
         <ul>
-            <li v-for="x in a">{{x}}</li>
+            <li v-for="x in a">{{x.name}}</li>
         </ul>
 
         <h1>Names that starts with "E"</h1>
-        <div>
-            {{checkR}}
-        </div>
+        <ul>
+            <li v-for="x in filterA">{{x.name}}</li>
+        </ul>
+
+        <h1>Starts with custom character</h1>
+        <input v-model="begins"/>
+        <input id="checkbox" type="checkbox" v-model="bool" />
+        <label for="checkbox">Case sensitive</label>
+        <ul>
+            <li v-for="z in filterCust">{{z.name}}</li>
+        </ul>
+
+        <h1>Add a name to the list</h1>
+        <input v-model="inpy" id="addy" type="text" />
+        <button for="addy" v-on:click="add()">Add</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
