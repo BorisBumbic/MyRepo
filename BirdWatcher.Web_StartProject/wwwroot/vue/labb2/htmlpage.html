@@ -7,7 +7,7 @@
 <body>
 
     <div id="lapp">
-        <button v-on:click="add">Ok</button>
+        <button v-on:click="add()">Ok</button>
         <div>Räknare: {{somenumber}}</div>
         <div v-if="(somenumber >= 10 && somenumber < 20)">Många inputs!</div>
         <div v-if="(somenumber >= 20)">On fire!</div>

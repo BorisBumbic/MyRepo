@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="number" id="ett" v-model="json[0].quantity" />
+        <label for="ett">{{json[0].name}}</label>
+        <button v-on:click="add(0)">+</button>
+        <button v-on:click="subtract(0)">-</button>
+        <label v-if="json[0].quantity === 0">NOLL</label>
+        <br>
+
+        <input type="number" id="två" v-model="json[1].quantity" />
+        <label for="två">{{json[1].name}}</label>
+        <button v-on:click="add(1)">+</button>
+        <button v-on:click="subtract(1)">-</button>
+        <label v-if="json[1].quantity === 0">NOLL</label>
+        <br>
+
+        <input type="number" id="tre" v-model="json[2].quantity" />
+        <label for="tre">{{json[2].name}}</label>
+        <button v-on:click="add(2)">+</button>
+        <button v-on:click="subtract(2)">-</button>
+        <label v-if="json[2].quantity === 0">NOLL</label>
+        <br>
+
+        <h1>Det finns {{summa}} produkter</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="JavaScript4.js"></script>
+</body>
+</html>
