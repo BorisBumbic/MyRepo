@@ -6,25 +6,21 @@
 </head>
 <body>
     <!-- recreate knapp -->
-    <button onclick="seed()" style="display: inline-block">Seed</button>
     <button onclick="getStats()" style="display: inline-block">Statistics</button>
-    <button onclick="recreate()" style="display: inline-block">recreate</button>
-    <button onclick="toggleShowAdd()">Add</button>
+    <button onclick="toggleShowAdd()" style="display: inline-block">Add</button>
     <button onclick="displayTable()" style="display: inline-block">Update</button>
     <!-- Add news "addFormHeader"-input och knapp till "addNews" -->
     <table id="table"></table>
 
-    <div style="display:none" id="hiddenAdd">
-        Header:<input id="header" />
-        Info:<input id="info" />
-        Body;<input id="body" />
-        <button onclick="addNews()" id="showAddButton">ADD</button>
-    </div>
+        
+        <input v-if="fieldState === 'add'|| fieldState === 'update'" v-model="addForm.header" placeholder="Header"/>
+        <button v-if='fieldState === "add"' onclick="add()">Add</button>
+        <button v-if='fieldState === "update"' onclick="update()">Update</button>
 
 
 
 
     <div id="statswindow"></div>
-    <script src="/js/main.js"></script>
+    <script src="js/newJavaScript.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ namespace NewsApp.Controllers
         [HttpPost("recreate")]
         public IActionResult RecreateDatabase()
         {
-            _newsRepository.RecreateDatabase();
+            _newsRepository.Seed();
             return Ok();
         }
 

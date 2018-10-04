@@ -33,7 +33,7 @@ async function addNews() {
 
 async function recreate() {
     
-    let response = await fetch("api/News/recreate",
+    let response = await fetch("api/news/recreate", 
         {
             method: "POST"
         })
