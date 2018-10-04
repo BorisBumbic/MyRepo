@@ -1,4 +1,8 @@
-﻿@model Onlinestore.Models.Product
+﻿@using Onlinestore.Viewservice
+@model Onlinestore.Models.Product
+
+
+@inject Viewservices viewservice
 
 @{
     ViewData["Title"] = "Edit";
@@ -24,7 +28,16 @@
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ForSale" class="control-label"></label>
+                <input asp-for="ForSale" class="form-control" />
+                <span asp-validation-for="ForSale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+            <div class="form-group">
+                @*tillagd*@
+                <select asp-for="CategoryId" asp-items="viewservice.GetSelectListItemsForCategories()" class="form-control"></select>
             </div>
         </form>
     </div>

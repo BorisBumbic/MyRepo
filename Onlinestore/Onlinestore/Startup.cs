@@ -13,6 +13,7 @@ using Onlinestore.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Onlinestore.Viewservice;
+using Onlinestore.Filters;
 
 namespace Onlinestore
 {
@@ -41,7 +42,10 @@ namespace Onlinestore
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(config =>
+            {
+                config.Filters.Add(new ExceptionFilterAttribute());
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<Viewservices, Viewservices>();
         }
 
