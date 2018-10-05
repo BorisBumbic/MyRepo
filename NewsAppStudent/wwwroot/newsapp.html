@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Newsapp</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- recreate knapp -->
+
+    <button onclick="seeds()">  Seed  </button>
+    <button onclick="statics()">  Statics  </button>
+    <button onclick="recreate()">  Recreate  </button>
+    <button onclick="showInputTable()">  Add  </button>
+    <button onclick="getNewsTable()"> show tabel </button>
+    <button onclick="showUpdateTable()">Update</button>
+
+    <table id="tHead">
+        <thead >
+            <tr>
+                <th>Id</th>
+                <th>Header</th>
+                <th>Created Time</th>
+                <th>Updated Time</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="newsTableBody">
+
+        </tbody>
+    </table>
+
+
+    <div id="HiddencontactUpdate">
+        Id:<input id="id" />
+        Header:<input id="addFormHeader" />
+        Info:<input id="info" />
+        Body:<input id="body" />
+
+    </div>
+    <div id="Hiddencontact">
+        Header:<input id="addFormHeader" />
+        Info:<input id="info" />
+        Body:<input id="body" />
+
+    </div>
+
+    <button id="addNewsUpdateButton" onclick="upDate()">Update</button>
+    <button id="addNewsButton" onclick="addNews()">  addNews  </button>
+    <div id="statics"></div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
