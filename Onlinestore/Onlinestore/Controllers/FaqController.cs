@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Onlinestore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +21,16 @@ namespace Onlinestore.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var stringService = new Common.services.StringService();
+
+            string s = "Hejsan på dejsan din gamle galosch!";
+            string a = stringService.CutString(s, 30);
+            return View(a);
         }
 
         public IActionResult TopFive()
         {
             return View();
         }
-   }
+    }
 }
