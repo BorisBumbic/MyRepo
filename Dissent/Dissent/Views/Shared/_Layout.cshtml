@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Onlinestore</title>
+    <title>@ViewData["Title"] - Dissent</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -17,29 +17,23 @@
     </environment>
 </head>
 <body>
-    <nav id="navvy" class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggla navigationen</span>
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Onlinebutiken</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Dissent</a>
             </div>
-            <div id="navvy" class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Hem</a></li>
-                    <li><a asp-area="" asp-controller="Faq" asp-action="Index">Faq</a></li>
-                    <li><a asp-area="" asp-controller="Faq" asp-action="TopFive">Top 5</a></li>
-                    <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                    <li><a asp-area="" asp-controller="Weather" asp-action="Index">Weather</a></li>
-                    <li><a asp-area="" asp-controller="Categories" asp-action="Create">Categories</a></li>
-                    @*<li><a asp-area="" asp-controller="Home" asp-action="About">Om oss</a></li>
-        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a></li>*@
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
-                <partial name="_LoginPartial" />
             </div>
         </div>
     </nav>
@@ -50,7 +44,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - Onlinestore</p>
+            <p>&copy; 2018 - Dissent</p>
         </footer>
     </div>
 
@@ -58,7 +52,6 @@
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        @*<script>alert("Hej testmiljö!")</script>*@
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
