@@ -13,8 +13,8 @@ namespace Onlinestore.Data
             : base(options)
         {
         }
-        public DbSet<Onlinestore.Models.Product> Product { get; set; }
-        public DbSet<Onlinestore.Models.Testy> Testy { get; set; }
-        public DbSet<Onlinestore.Models.Category> Category { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Testy> Testy { get; set; }
+        public DbSet<Category> Category { get; set; }
     }
 }

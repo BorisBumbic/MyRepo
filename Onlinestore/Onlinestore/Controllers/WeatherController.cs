@@ -21,12 +21,18 @@ namespace Onlinestore.Controllers
         public IActionResult GetWeather(WeatherViewModels vm)
         {
             var smhiService = new SmhiServices();
-            Rootobject result = smhiService.GetMeteorologicalForecast(vm.Longitude, vm.Latitude);
+            try
+            {
+                Rootobject result = smhiService.GetMeteorologicalForecast(vm.Longitude, vm.Latitude);
 
-            List<TimeTemp> list = smhiService.FilterTemperature(result, vm.TimeTemps[0].Time);
+                //List<TimeTemp> list = smhiService.FilterTemperature(result, vm.TimeTemps[0].Time);
 
-            vm.TimeTemps = smhiService.FilterTemperature(result, DateTime.Now);
+                vm.TimeTemps = smhiService.FilterTemperature(result, DateTime.Now);
 
+            }catch (Exception ex)
+            {
+                vm.ErrorMessage = ex.Message;
+            }
             //vm.TimeTemps = new List<TimeTemp>();
 
             //vm.TimeTemps.Add(new TimeTemp { Temp = 18, Time = DateTime.Now });

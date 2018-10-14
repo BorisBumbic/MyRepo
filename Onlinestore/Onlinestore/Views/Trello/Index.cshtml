@@ -1,0 +1,20 @@
+﻿@model List<XXXX.Models.RequestAllBoards.TrelloRoot>
+
+
+<h2>Alla boards</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a asp-action="Board" asp-route-id="@item.id">@item.name</a></td>
+        </tr>
+    }
+</table>
+
+<button asp-action="AddCardForm">Create new</button>

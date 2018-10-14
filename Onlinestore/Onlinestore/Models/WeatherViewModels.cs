@@ -11,6 +11,7 @@ namespace Onlinestore.Models
         public decimal Longitude { get; set; }
         public decimal Latitude { get; set; }
         public List<TimeTemp> TimeTemps { get; set; }
+        public string ErrorMessage { get; set; }
     }
 
 }
