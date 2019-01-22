@@ -1,40 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a command");
+            Console.WriteLine("Enter a number");
+            int input = int.Parse(Console.ReadLine());
 
-            string userInput = Console.ReadLine();
+            int[] fibonacciArray = new int[input];
+            fibonacciArray[0] = 0;
+            fibonacciArray[1] = 1;
 
-            Console.WriteLine("Enter your preferred character");
-
-            string pref = Console.ReadLine(); ;
-
-            string[] userInputArray = userInput.Split();
-
-            foreach (var item in userInputArray)
+            for (int i = 0; i < fibonacciArray.Length - 2; i++)
             {
-                int temp = int.Parse(item);
+                fibonacciArray[i + 2] = fibonacciArray[i] + fibonacciArray[i + 1];
 
-                for (int i = 0; i < temp; i++)
-                {
-                    Console.Write(pref);
+            }
 
-                    for (int j = 0; j < temp; j++)
-                    {
-                        Console.Write(pref);
-                    }
-                    Console.WriteLine();
-                }
+            foreach (var item in fibonacciArray)
+            {
+                Console.WriteLine(item);
             }
 
         }

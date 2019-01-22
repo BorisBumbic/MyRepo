@@ -1,0 +1,469 @@
+
+
+***** 2018-10-04 13:24:44 ******
+
+Invalid column name 'Hell'.
+
+
+
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.Aggregate_[TSource,TAccumulate,TResult](IAsyncEnumerable`1 source, TAccumulate seed, Func`3 accumulator, Func`2 resultSelector, CancellationToken cancellationToken)
+   at Onlinestore.Controllers.ProductsController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-05 15:15:41 ******
+
+Index was outside the bounds of the array.
+
+
+
+   at System.String.get_Chars(Int32 index)
+   at Onlinestore.Controllers.FaqController.CutString(String text, Int32 length) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\FaqController.cs:line 49
+   at Onlinestore.Controllers.FaqController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\FaqController.cs:line 27
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-05 15:15:41 ******
+
+Index was outside the bounds of the array.
+
+
+
+   at System.String.get_Chars(Int32 index)
+   at Onlinestore.Controllers.FaqController.CutString(String text, Int32 length) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\FaqController.cs:line 49
+   at Onlinestore.Controllers.FaqController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\FaqController.cs:line 27
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-05 15:16:18 ******
+
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+
+
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at Onlinestore.Controllers.FaqController.CutString(String text, Int32 length) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\FaqController.cs:line 49
+   at Onlinestore.Controllers.FaqController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\FaqController.cs:line 27
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-10 16:59:53 ******
+
+Object reference not set to an instance of an object.
+
+
+
+   at Onlinestore.Controllers.WeatherController.GetWeather(WeatherViewModels vm) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\WeatherController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:11:22 ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:14:09 ******
+
+Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[XXXX.Models.RequestAllBoards.TrelloRoot]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'id', line 1, position 6.
+
+
+
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 28
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:14:49 ******
+
+Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[XXXX.Models.RequestAllBoards.TrelloRoot]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'id', line 1, position 6.
+
+
+
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 28
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:20:56 ******
+
+Bad Request
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:25:47 ******
+
+Only 'http' and 'https' schemes are allowed.
+Parameter name: requestUri
+
+
+
+   at System.Net.Http.HttpRequestMessage.InitializeValues(HttpMethod method, Uri requestUri)
+   at System.Net.Http.HttpRequestMessage..ctor(HttpMethod method, Uri requestUri)
+   at System.Net.Http.HttpClient.GetAsync(Uri requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.GetAsync(String requestUri)
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 12
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:28:32 ******
+
+Bad Request
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:30:56 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:32:33 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:51:17 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 10:52:09 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllBoards() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 27
+   at Onlinestore.Controllers.TrelloController.Index() in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:33:15 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:34:10 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:38:19 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:39:15 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:44:46 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:45:45 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:47:54 ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:48:55 ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 2018-10-11 11:51:54 ******
+
+Bad Request
+
+
+
+   at OnlineStore.Services.HttpServicez.Get(String url) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\HttpServicez.cs:line 18
+   at Onlinestore.Viewservice.TrelloServices.GetAllListsForBoards(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Viewservice\TrelloServices.cs:line 35
+   at Onlinestore.Controllers.TrelloController.Board(String id) in C:\SOurceTreeTMP\Onlinestore\Onlinestore\Controllers\TrelloController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
