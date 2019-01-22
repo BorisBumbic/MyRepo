@@ -13,10 +13,17 @@ namespace Common.test
         {
             Assert.AreEqual("acad...", a.CutString("academy", 4));
         }
+
         [TestMethod]
         public void should_return_null_if_string_null()
         {
             Assert.AreEqual("", a.CutString("academy", 0));
+        }
+
+        [TestMethod]
+        public void should_return_original_string()
+        {
+            Assert.AreEqual("academy", a.CutString("academy", 100));
         }
     }
 }
